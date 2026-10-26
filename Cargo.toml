@@ -1,0 +1,40 @@
+[package]
+name = "kry-core"
+version = "1.0.0"
+edition = "2024"
+
+authors = ["Fabricio Paulo <fabricio@dl.tec.br>"]
+description = "Biblioteca nativa para criptografia e descriptografia de arquivos utilizando AES-256-GCM e Argon2id."
+license = "MIT"
+readme = "README.md"
+
+repository = "https://github.com/dioleti/kry-core"
+homepage = "https://github.com/dioleti/kry-core"
+documentation = "https://docs.rs/kry-core"
+
+keywords = [
+    "crypto",
+    "encryption",
+    "aes-gcm",
+    "argon2",
+    "security"
+]
+
+categories = [
+    "cryptography",
+    "encoding"
+]
+
+rust-version = "1.99"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+aes-gcm = "0.11.1"
+argon2 = "0.6.0"
+rand = "0.10.3"
+zeroize = { version = "1.9.1", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3"
